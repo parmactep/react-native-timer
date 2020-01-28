@@ -28,7 +28,7 @@ function TimerForm() {
 					if (!value) {
 						return;
 					}
-					store.setTime(+value);
+					store.setTime(+value * 60);
 					store.start();
 				}}
 			>

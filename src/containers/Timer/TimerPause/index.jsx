@@ -11,7 +11,7 @@ import styles from './styles';
 import store from 'store';
 
 function TimerPause() {
-	return !store.time && (
+	return !!store.time && (
 		<View style={styles.wrapper}>
 			<TouchableOpacity style={styles.button} onPress={store.isPaused ? store.start : store.pause}>
 				<Icon name={store.isPaused && 'play' || 'pause'} />
