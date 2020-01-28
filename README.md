@@ -1,5 +1,5 @@
 # React native countdown timer app
-![Screenshot](https://raw.githubusercontent.com/parmactep/react-native-timer/master/screenshot.png)
+![Screenshot](https://github.com/parmactep/react-native-timer/raw/master/screenshot.png)
 ## Quick start
 ### Install all dependencies
 ```
