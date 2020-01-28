@@ -1,4 +1,8 @@
 import { types } from 'mobx-state-tree';
+import Sound from 'react-native-sound';
+import beep from 'assets/beep.mp3';
+
+const sound = new Sound(beep);
 
 export default types
 	.model('Timer', {
@@ -34,7 +38,11 @@ export default types
 			self.loop();
 		},
 		loop() {
-			if (self.isPaused || self.time <= 0) {
+			if (self.time === 0) {
+				sound.play(() => sound.release());
+				return;
+			}
+			if (self.isPaused) {
 				return;
 			}
 			self.timeout = setTimeout(self.tick, self.tickTimeout * 1000);
